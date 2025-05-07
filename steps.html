@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="Your place to get started with semantic web development"
+    />
+    <title>Step Sankhya</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <ul>
+          <li><a href="index.html">BMI Buddy</a></li>
+          <li><a href="calories.html">Calorie Compass</a></li>
+          <li><a href="water.html">Water Watcher</a></li>
+          <li><a href="steps.html">Step Sankhya</a></li>
+        </ul>
+      </nav>
+      <hgroup>
+        <h1>Steps Sankhya</h1>
+        <p>check how many steps you need to walk</p>
+      </hgroup>
+    </header>
+
+    <main class="container">
+      <section>
+        <p>Plan your walking routine to reach your goal weight.</p>
+
+        <div>
+          <input
+            type="number"
+            placeholder="Current Weight (kg)"
+            id="current"
+            required
+          />
+          <input
+            type="number"
+            placeholder="Goal Weight (kg)"
+            id="goal"
+            required
+          />
+          <input
+            type="number"
+            placeholder="Time Period (in months)"
+            id="timePeriod"
+          />
+          <button id="calculateBtn">Calculate Steps</button>
+        </div>
+      </section>
+      <section>
+        <p id="result"></p>
+      </section>
+    </main>
+    <footer class="container neog-footer">
+      <small>
+        go from zero to hero at full stack development with
+        <a href="https://neog.camp">neog.camp</a>
+      </small>
+    </footer>
+    <script>
+      function calculateStepsPerDay(currentWeight, goalWeight, months) {
+        const kgToLose = currentWeight - goalWeight;
+        const totalCaloriesToBurn = kgToLose * 7700;
+
+        const totalDays = months * 30;
+
+        const dailyCaloriesBurn = totalCaloriesToBurn / totalDays;
+
+        return Math.round(dailyCaloriesBurn / 0.04);
+      }
+
+      function handleButtonClick() {
+        const currentWeight = parseFloat(
+          document.getElementById("current").value
+        );
+        const goalWeight = parseFloat(document.getElementById("goal").value);
+        const months = parseFloat(document.getElementById("timePeriod").value);
+        const result = document.getElementById("result");
+
+        if (currentWeight <= 0 || goalWeight >= currentWeight || months <= 0) {
+          result.innerText = "Please enter a valid weight and time period.";
+          return;
+        }
+
+        const stepsPerDay = calculateStepsPerDay(
+          currentWeight,
+          goalWeight,
+          months
+        );
+
+        result.innerText = `To reach your goal, walk at least ${stepsPerDay} steps per day for ${months} months.`;
+      }
+
+      const calculateBtn = document.getElementById("calculateBtn");
+      calculateBtn.addEventListener("click", handleButtonClick);
+    </script>
+  </body>
+</html>
