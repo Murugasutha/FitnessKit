@@ -55,6 +55,6 @@ Built as part of my internship at **[neog.camp](https://neog.camp)** – where I
 ## 📬 Feedback
 
 Suggestions, issues, or collaboration ideas?  
-Connect with me: [https://www.linkedin.com/in/muruga-sutha-k/]
+Connect with me: [LinkedIn](https://www.linkedin.com/in/muruga-sutha-k/)
 
 
