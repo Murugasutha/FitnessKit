@@ -24,9 +24,17 @@ Check out the live version here: [Live App Link](#)
 
 ## 📷 Screenshots
 
-| BMI Buddy | Calorie Compass | Water Watcher | Step Sankhya |
-|-----------|------------------|----------------|---------------|
-| ![BMI](./screenshots/bmi.png) | ![Calorie](./screenshots/calorie.png) | ![Water](./screenshots/water.png) | ![Steps](./screenshots/steps.png) |
+### BMI Calculator
+![BMI](./screenshots/bmi.png) 
+
+### Calorie Compass
+![Calorie](./screenshots/calorie.png) 
+
+### Water intake
+![Water](./screenshots/water.png) 
+
+### Steps Goal
+![Steps](./screenshots/steps.png)
 
 ## 🧠 What I Learned
 
