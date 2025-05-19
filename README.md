@@ -21,19 +21,6 @@ Check out the live version here: [Live App Link](#)
 - **Bootstrap & PicoCSS** – Responsive and minimalist UI
 - **JavaScript** – Logic and interactivity for all calculators
 
-## 📂 Folder Structure
-
-fitness-tool-kit/
-│
-├── index.html # BMI Buddy
-├── calories.html # Calorie Compass
-├── water.html # Water Watcher
-├── steps.html # Step Sankhya
-├── styles.css # Custom styling
-├── script.js # Calculator logic (if shared)
-├── /screenshots # App screenshots
-└── README.md # Project documentation
-
 
 ## 📷 Screenshots
 
